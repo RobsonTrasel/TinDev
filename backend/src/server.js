@@ -3,10 +3,13 @@ const routes = require('./routes');
 const mongoose = require('mongoose');
 /**
  * Initialize server :D
+ * @author Robson Fernando
+ * @global 
  */
 
 const port = 4444;
 const server = express();
+server.use(express.json())
 server.use(routes);
 
 /**
